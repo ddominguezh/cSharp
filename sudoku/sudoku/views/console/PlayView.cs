@@ -1,9 +1,9 @@
 using System;
-using sudoku.controller;
+using usantatecla.sudoku.controllers;
 
-namespace sudoku.views.console
+namespace usantatecla.sudoku.views.console
 {
-    class PlayView {
+    public class PlayView {
 
         private PlayController playController;
 
@@ -21,7 +21,7 @@ namespace sudoku.views.console
         }
         */
 
-        public void interact() {
+        public void Interact() {
             Console.WriteLine("Hello Sudoku Console Play!");
         }
     }

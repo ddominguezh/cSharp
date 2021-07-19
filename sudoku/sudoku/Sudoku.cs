@@ -1,33 +1,30 @@
-using sudoku.controller;
-using sudoku.views;
+using usantatecla.sudoku.controllers;
+using usantatecla.sudoku.models;
+using usantatecla.sudoku.views;
 
-namespace sudoku
+namespace usantatecla.sudoku
 {
     public abstract class Sudoku {
 
-        //private Game game;
-        private StartController startController;
-        private PlayController playController;
-        private ResumeController resumeController;
-        private View view;
+        private Board _board;
+        private StartController _startController;
+        private PlayController _playController;
+        private ResumeController _resumeController;
+        private View _view;
 
         protected Sudoku() {
-            //this.game = new Game();
-            //this.startController = new StartController(this.game);
-            //this.playController = new PlayController(this.game);
-            //this.resumeController = new ResumeController(this.game);
-            //this.view = this.createView(this.startController, this.playController, this.resumeController);
-
-            this.startController = new StartController();
-            this.playController = new PlayController();
-            this.resumeController = new ResumeController();
-            this.view = this.createView(this.startController, this.playController, this.resumeController);
+            this._board = new Board();
+            this._startController = new StartController();
+            this._playController = new PlayController();
+            this._resumeController = new ResumeController();
+            this._view = this.CreateView(this._startController, this._playController, this._resumeController);
         }
 
-        protected abstract View createView(StartController startController, PlayController playController, ResumeController resumeController2);
+        protected abstract View CreateView(
+            StartController startController, 
+            PlayController playController, 
+            ResumeController resumeController);
 
-        protected void play() {
-            this.view.interact();
-        }
+        protected void Play() => this._view.Interact();
     }
 }

@@ -1,9 +1,9 @@
 using System;
-using sudoku.controller;
+using usantatecla.sudoku.controllers;
 
-namespace sudoku.views.console
+namespace usantatecla.sudoku.views.console
 {
-    class ResumeView {
+    public class ResumeView {
 
         private ResumeController resumeController;
 
@@ -11,7 +11,7 @@ namespace sudoku.views.console
             this.resumeController = resumeController;
         }
 
-        public bool interact() {
+        public bool Interact() {
             Console.WriteLine("Hello Sudoku Console Resume!");
             return false;
         }

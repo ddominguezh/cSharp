@@ -1,17 +1,17 @@
-namespace sudoku.views
+namespace usantatecla.sudoku.views
 {
     public abstract class View {
 
-        public void interact() {
+        public void Interact() {
             do {
-                this.start();
-                this.play();
-            } while (this.isResumed());
+                this.Start();
+                this.Play();
+            } while (this.IsResumed());
         }
 
-        protected abstract void start();
-        protected abstract void play();
-        protected abstract bool isResumed();
+        protected abstract void Start();
+        protected abstract void Play();
+        protected abstract bool IsResumed();
 
     }
 }

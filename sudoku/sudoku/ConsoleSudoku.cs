@@ -1,19 +1,19 @@
 ﻿using System;
-using sudoku.controller;
-using sudoku.views.console;
+using usantatecla.sudoku.controllers;
+using usantatecla.sudoku.views.console;
 
-namespace sudoku
+namespace usantatecla.sudoku
 {
-    class ConsoleSudoku : Sudoku
+    public class ConsoleSudoku : Sudoku
     {
         
-        protected override View createView(StartController startController, PlayController playController, ResumeController resumeController){
+        protected override View CreateView(StartController startController, PlayController playController, ResumeController resumeController){
             return new View(startController, playController, resumeController);
         }
 
         static void Main(string[] args)
         {
-            new ConsoleSudoku().play();
+            new ConsoleSudoku().Play();
         }
     }
 }

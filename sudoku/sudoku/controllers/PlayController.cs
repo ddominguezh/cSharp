@@ -1,6 +1,6 @@
 using System;
 
-namespace sudoku.controller
+namespace usantatecla.sudoku.controllers
 {
     public class PlayController
     {
